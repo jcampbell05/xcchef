@@ -14,6 +14,15 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "xcchef",
+            dependencies: ["ratatouille"]),
+        .target(
+            name: "ratatouille",
             dependencies: []),
+        .testTarget(
+            name: "xcchefTests",
+            dependencies: ["xcchef"]),
+        .testTarget(
+            name: "ratatouilleTests",
+            dependencies: ["ratatouille"]),
     ]
 )
