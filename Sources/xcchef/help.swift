@@ -1,6 +1,6 @@
 import Guaka
 
-var rootCommand = Command(usage: "t", configuration: configuration, run: execute)
+var helpCommand = Command(usage: "t", configuration: configuration, run: execute)
 
 private func configuration(command: Command) {
 

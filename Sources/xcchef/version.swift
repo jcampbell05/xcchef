@@ -1,6 +1,6 @@
 import Guaka
 
-var rootCommand = Command(usage: "t", configuration: configuration, run: execute)
+var versionCommand = Command(usage: "t", configuration: configuration, run: execute)
 
 private func configuration(command: Command) {
 
