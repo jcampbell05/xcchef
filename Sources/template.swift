@@ -19,6 +19,9 @@ class TemplateManager {
                 let version = locationComponents.count > 1 ? locationComponents[1] : "master"
 
                 userTemplateLocation.shell("git", "clone", "-q", "https://github.com/" + name + ".git", "-b", version)
+                print("Installed \(name)")
+            } else {
+                fatalError("Invalid template source provided")
             }
         }
     }
