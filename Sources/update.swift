@@ -1,20 +1,13 @@
 import Guaka
 
-var updateCommand = Command(
-  usage: "update", configuration: configuration, run: execute)
-
-
-private func configuration(command: Command) {
-
-  command.add(flags: [
-    // Add your flags here
-    ]
-  )
-
-  // Other configurations
-}
+let updateCommand = Command(usage: "update", run: execute)
 
 private func execute(flags: Flags, args: [String]) {
-  // Execute code here
-  print("update called")
+  let templateManager = TemplateManager()
+  
+  if args.count > 0 {
+    templateManager.update(sourceComponents: args)
+  } else {
+    print(installCommand.helpMessage)
+  }
 }

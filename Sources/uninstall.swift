@@ -1,20 +1,13 @@
 import Guaka
 
-var uninstallCommand = Command(
-  usage: "uninstall", configuration: configuration, run: execute)
-
-
-private func configuration(command: Command) {
-
-  command.add(flags: [
-    // Add your flags here
-    ]
-  )
-
-  // Other configurations
-}
+let uninstallCommand = Command(usage: "uninstall", configuration: configuration, run: execute)
 
 private func execute(flags: Flags, args: [String]) {
-  // Execute code here
-  print("uninstall called")
+  let templateManager = TemplateManager()
+  
+  if args.count > 0 {
+    templateManager.uninstall(sourceComponents: args)
+  } else {
+    print(installCommand.helpMessage)
+  }
 }
