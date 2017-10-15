@@ -1,7 +1,7 @@
 import Guaka
 
-var templateCommand = Command(
-  usage: "template", configuration: configuration, run: execute)
+var installCommand = Command(
+  usage: "install", configuration: configuration, run: execute)
 
 
 private func configuration(command: Command) {
@@ -16,5 +16,5 @@ private func configuration(command: Command) {
 
 private func execute(flags: Flags, args: [String]) {
   // Execute code here
-  print("template called")
+  print("install called")
 }
