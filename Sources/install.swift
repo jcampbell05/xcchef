@@ -1,20 +1,14 @@
 import Guaka
 
-var installCommand = Command(
-  usage: "install", configuration: configuration, run: execute)
-
-
-private func configuration(command: Command) {
-
-  command.add(flags: [
-    // Add your flags here
-    ]
-  )
-
-  // Other configurations
-}
+let installCommand = Command(usage: "install", run: execute)
 
 private func execute(flags: Flags, args: [String]) {
-  // Execute code here
-  print("install called")
+
+  let templateManager = TemplateManager()
+  
+  if args.count > 0 {
+    templateManager.install(templateLocations: args)
+  } else {
+    print(installCommand.helpMessage)
+  }
 }
