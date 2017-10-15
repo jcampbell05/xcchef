@@ -45,10 +45,11 @@ mint run xcodeswift/xcchef
 
 You can check the available commands by just running `xcchef` from the console.
 
+TODO: Outline commands so we can build them
 
 ## References
 
-- [Commander](https://github.com/kylef/Commander)
+- [Guaka](https://github.com/nsomar/Guaka)
 
 ## License
 
