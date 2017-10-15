@@ -1,20 +1,7 @@
 import Guaka
 
-var rootCommand = Command(
-  usage: "xcchef", configuration: configuration, run: execute)
-
-
-private func configuration(command: Command) {
-
-  command.add(flags: [
-    // Add your flags here
-    ]
-  )
-
-  // Other configurations
-}
+let rootCommand = Command(usage: "xcchef", run: execute)
 
 private func execute(flags: Flags, args: [String]) {
-  // Execute code here
-  print("git called")
+  print(rootCommand.helpMessage)
 }
