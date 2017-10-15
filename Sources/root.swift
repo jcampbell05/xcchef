@@ -1,6 +1,8 @@
 import Guaka
 
-var rootCommand = Command(usage: "t", configuration: configuration, run: execute)
+var rootCommand = Command(
+  usage: "xcchef", configuration: configuration, run: execute)
+
 
 private func configuration(command: Command) {
 
@@ -14,5 +16,5 @@ private func configuration(command: Command) {
 
 private func execute(flags: Flags, args: [String]) {
   // Execute code here
-  print("t called")
+  print("git called")
 }
