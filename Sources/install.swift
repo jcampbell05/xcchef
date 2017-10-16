@@ -7,7 +7,7 @@ private func execute(flags: Flags, args: [String]) {
   let templateManager = TemplateManager()
   
   if args.count > 0 {
-    templateManager.install(sourceComponents: args)
+    templateManager.install(templateSources: args)
   } else {
     print(installCommand.helpMessage)
   }
