@@ -3,7 +3,10 @@ os:
 language: generic
 osx_image: xcode9
 install:
-  - eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
+- eval "$(curl -sL https://gist.githubusercontent.com/kylef/5c0475ff02b7c7671d2a/raw/9f442512a46d7a2af7b850d65a7e9bd31edfb09b/swiftenv-install.sh)"
 script:
-  - swift build
-  - swift test
+- swift build
+- swift test
+notifications:
+  slack:
+    secure: ee+lBgvUIe/vPxc7IhBewyA/Y5e6OJDmLVGgrpjvmK9Bzoh+DcyJH43JwLolqoFRSjYYGvdTKFP1GmvBXZpEVgmNriU4xcg2Puv+Eh0a1BRFm19DAy/ak60didSJkfaiH7NBr/J4BfQgNbbQg34hjupeSekNttt6wV2adPFWBBc8Z7ROlV4KM2kcg3/TNIy/bTzNZ9kyRqd6nBncPEaXwZC7HL28xREmCY8cOokpjFl6VmoGyE97s/Z/mTiYlP/K75OZkYjZMWCq9CTZZc0QaSSuIZWE1O5ETvwgifKB5nhwfaUOwMEa++lTB4MWrly/mKwCBUVQCv5HD38C4496fWDJ94mJ3gDD9AifMmQf6uIWDLIEFbEMsQlnGjJwZcyQrGSVL/GhiyaDqUqBOHuHEYffYMi5lObv0K+MV5hRKzbLdwuyiuAlfJdNB/41p3Zaa4lKvodWc5qmUny9Xl1pZ/zrRYdHZa6oOjC/b7i8DRJkRuWujIcYEgu0fWuSn2+s/h9untIjYZZp6pF6q8b82NY1bnIhW5Ng698znVqE/QmbvlqYf9wATZEMme/EKYbl4rYBuh+YHx10z22+V2egRklxNoLhE4R0FI9Lj1g83IMw6aOfnNQfXnHxJrUBg4/0b/Y5rq1Ljsksi1nRbvs2xkGAlFtmgefFbO7o3MPkbDE=
